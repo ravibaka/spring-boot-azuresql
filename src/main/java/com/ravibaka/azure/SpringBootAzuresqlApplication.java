@@ -17,12 +17,12 @@ public class SpringBootAzuresqlApplication {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @PostMapping("/addEmployee")
+    @PostMapping("/employee")
     public Employee addEmployee(@RequestBody Employee employee) {
         return employeeRepository.save(employee);
     }
 
-    @GetMapping("/getEmployees")
+    @GetMapping("/employees")
     public List<Employee> getEmployees() {
         return employeeRepository.findAll();
     }
